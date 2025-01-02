@@ -1,0 +1,131 @@
+.cta-container {
+    background-color: #1a1a1a;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    margin: 1.5rem 0;
+    border: 4px solid #ff6b00;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(
+        circle at center,
+        rgba(255, 107, 0, 0.1) 0%,
+        transparent 70%
+    );
+    pointer-events: none;
+}
+
+.cta-content {
+    position: relative;
+    z-index: 1;
+}
+
+.cta-title {
+    color: white;
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin: 0 0 1.5rem 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.pulse-container {
+    position: relative;
+    display: inline-block;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #ff6b00;
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 600;
+    padding: 1rem 3rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(255, 107, 0, 0.3);
+    position: relative;
+    z-index: 2;
+}
+
+.cta-button:hover {
+    background-color: #ff8533;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 107, 0, 0.4);
+}
+
+.cta-button:active {
+    transform: translateY(1px);
+}
+
+.pulse-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    border-radius: 2rem;
+    border: 3px solid #ff6b00;
+    animation: pulse 2s infinite;
+    pointer-events: none;
+}
+
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0;
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .cta-container {
+        padding: 1.5rem;
+    }
+
+    .cta-title {
+        font-size: 1.5rem;
+    }
+
+    .cta-button {
+        font-size: 1.125rem;
+        padding: 0.875rem 2.5rem;
+    }
+}
+
+/* Optional hover effect for extra pizzazz */
+.cta-container:hover::before {
+    animation: glow 2s infinite;
+}
+
+@keyframes glow {
+    0% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}

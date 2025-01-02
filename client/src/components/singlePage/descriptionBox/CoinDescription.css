@@ -1,0 +1,30 @@
+.description-container {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: #1a1a1a;
+    color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #333;
+}
+
+.description-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.description-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+    color: #ff6b00;
+}
+
+.description-text {
+    margin: 0;
+    line-height: 1.6;
+    color: #e5e5e5;
+    font-size: 1rem;
+}

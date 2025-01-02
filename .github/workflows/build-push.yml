@@ -1,0 +1,41 @@
+name: dockerize backend-frontend app
+on:
+  [push]
+
+jobs:
+ backend:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: backend image
+        run: |
+          docker build -f Dockerfile -t nazrulidb/backend:latest .
+      - name: publish
+        run: |
+          docker login -u nazrulidb -p ${{ secrets.DOCKER_BACKEND }}
+          docker push nazrulidb/backend:latest
+    
+ frontend:
+     runs-on: ubuntu-latest
+     steps:
+       - name: checkout
+         uses: actions/checkout@v3
+       - name: frontend image
+         run: |
+            docker build -f client/Dockerfile -t nazrulidb/frontend:latest ./client
+       - name: Push frontend
+         run: |
+           docker login -u nazrulidb -p ${{ secrets.DOCKER_FRONTEND }}
+           docker push nazrulidb/frontend:latest
+
+  
+    
+                   
+ 
+  
+
+     
+    
+ 
+  

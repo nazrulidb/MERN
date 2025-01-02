@@ -1,0 +1,51 @@
+version: '3.7'
+
+services:
+  server:
+    image: lootmarkets/backend:latest
+    container_name: node-server
+    volumes:
+      - /app/node_modules
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mongo
+    restart: unless-stopped
+    env_file: ./.env
+    environment:
+      - NODE_ENV=production
+    networks:
+      - app-network
+
+  client:
+    image: lootmarkets/frontend:latest
+    container_name: react-client
+    volumes:
+      - /app/node_modules
+    depends_on:
+      - server
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    networks:
+      - app-network 
+
+  mongo:
+    image: mongo
+    volumes:
+      - data-volume:/data/db
+    ports:
+      - "27017:27017"
+    restart: unless-stopped
+    networks:
+      - app-network
+      
+
+networks:
+  app-network:
+        driver: bridge
+volumes:
+    data-volume:
+    node_modules:
+    web-root:
+      driver: local

@@ -1,0 +1,255 @@
+.popular {
+    margin-top: 2rem;
+    padding: 2rem;
+    background-color: #1a1a1a;
+    border: 4px solid #ff6b00;
+    border-radius: 1.5rem;
+}
+
+.popular-title {
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    padding: 1rem 1.5rem;
+    background: linear-gradient(90deg, #1a1a1a, #2d2d2d, #1a1a1a);
+    border-left: 4px solid #ff6b00;
+    border-radius: 0 8px 8px 0;
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 10px rgba(255, 107, 0, 0.1);
+}
+
+.popular-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #ff6b00, transparent);
+}
+
+.popular-title::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ff6b00);
+}
+
+@media screen and (max-width: 768px) {
+    .popular-title {
+        font-size: 1.5rem;
+        padding: 0.75rem 1rem;
+    }
+}
+.scroll-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.items {
+    text-decoration: none;
+    color: inherit;
+}
+
+.box {
+    background-color: #2d2d2d;
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+}
+
+.box:hover {
+    border-color: #ff6b00;
+    transform: translateY(-4px);
+}
+
+.images {
+    width: 150px;
+    min-width: 150px;
+    position: relative;
+}
+
+.popular-card-img {
+    width: 100%;
+    height: 100%;
+}
+
+.popular-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text {
+    padding: 1rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.title-social-card-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+}
+
+.card-coin-title {
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.popular-icons {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.icon-link {
+    color: #9ca3af;
+    transition: color 0.2s ease;
+}
+
+.icon-link:hover {
+    color: #ff6b00;
+}
+
+.ticker {
+    color: #ff6b00;
+    font-size: 0.875rem;
+    margin: 0;
+    padding: 0.25rem 0.5rem;
+    background-color: rgba(255, 107, 0, 0.1);
+    border-radius: 1rem;
+    display: inline-block;
+    margin-bottom: 0.75rem;
+}
+
+.description {
+    color: #e5e5e5;
+    font-size: 0.875rem;
+    margin: 0;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+.date {
+    margin-top: 1rem;
+    color: #9ca3af;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Custom Pagination */
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    gap: 0.5rem;
+}
+
+.page-button {
+    background-color: #2d2d2d;
+    border: none;
+    color: #ff6b00;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.page-button.active {
+    background-color: #ff6b00;
+    color: white;
+}
+
+.page-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Loading State */
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+}
+
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid #2d2d2d;
+    border-top: 3px solid #ff6b00;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .popular {
+        padding: 1rem;
+    }
+
+    .scroll-container {
+        grid-template-columns: 1fr;
+    }
+
+    .box {
+        flex-direction: column;
+    }
+
+    .images {
+        width: 100%;
+        height: 200px;
+    }
+
+    .text {
+        padding: 1rem;
+    }
+
+    .title-social-card-container {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .popular-icons {
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .scroll-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .scroll-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

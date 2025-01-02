@@ -1,0 +1,122 @@
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #000;
+    width: 500px;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+}
+
+.close-button {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 2;
+    transition: color 0.2s;
+}
+
+.close-button:hover {
+    color: #ccc;
+}
+
+.modal-header {
+    background: #f4511e;
+    padding: 12px 16px;
+    text-align: center;
+}
+
+.modal-header h2 {
+    color: white;
+    font-family: monospace;
+    font-size: 16px;
+    margin: 0;
+}
+
+.modal-title-activity {
+    background: #f4511e;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    padding: 8px 0;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.modal-body {
+    padding: 0 16px;
+}
+
+.activity-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.activity-table th {
+    color: #666;
+    font-weight: normal;
+    text-align: center;
+    padding: 16px 8px;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.activity-table td {
+    color: white;
+    padding: 16px 8px;
+    text-align: center;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.pagination button {
+    color: #666;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition: color 0.2s;
+}
+
+.pagination button:hover:not(:disabled) {
+    color: white;
+}
+
+.pagination button:disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+
+.pagination .active {
+    width: 36px;
+    height: 36px;
+    background: #3b82f6;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

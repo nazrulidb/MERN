@@ -1,0 +1,111 @@
+.popular .content {
+    padding: 10px;
+}
+
+@media screen and (min-width: 900px) {
+    .popular .scroll-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+        grid-auto-rows: 180px; /* Card height */
+        gap: 15px; /* Space between cards */
+    }
+
+    /* Adjust the box width to fit within the container */
+    .popular .box {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .popular .scroll-container {
+        display: grid;
+        grid-template-columns: 1fr; /* One column per row */
+        grid-auto-rows: unset; /* Auto height */
+        gap: 10px; /* Space between cards */
+    }
+}
+
+.popular .items {
+    display: block;
+}
+
+.popular .box {
+    background-color: #fff;
+    display: flex;
+    position: relative;
+    margin: 15px 0; /* Removed the right margin to fit better */
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+    width: 100%; /* Make sure the box takes up the full column width */
+}
+
+.popular .images {
+    position: relative;
+    height: 150px;
+}
+
+.popular img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    margin: 0 !important;
+}
+
+.popular .text h1 {
+    padding: 20px 0 0 20px;
+    margin: 0;
+}
+
+.popular .ticker {
+    color: #fb4c35;
+    padding-left: 20px;
+    font-size: 16px;
+}
+
+.popular .description {
+    padding-left: 20px;
+    font-size: 14px;
+}
+
+.popular .date {
+    margin-top: 15px;
+    padding: 0 0 0 20px;
+}
+
+.popular .comment {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 5px 0 0 20px;
+    margin-top: 5px;
+}
+
+/* Pagination styles */
+.popular .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.popular .pagination-button {
+    background-color: #fb4c35;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.popular .pagination-button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+
+.popular .icon-links {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.popular .icon-links a {
+    color: #333;
+    margin-right: 10px;
+}

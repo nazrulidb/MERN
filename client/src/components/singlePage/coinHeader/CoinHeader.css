@@ -1,0 +1,249 @@
+.header-card {
+    background-color: #1a1a1a;
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #333;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.coin-info {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex: 1;
+}
+
+.coin-image {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.coin-details {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.coin-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: white;
+    margin: 0;
+}
+
+.coin-ticker {
+    font-size: 1rem;
+    color: #9ca3af;
+    margin: 0;
+}
+
+.coin-marketcap {
+    font-size: 1rem;
+    color: #e5e5e5;
+    margin: 0;
+}
+
+.icon-links {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-left: auto;
+}
+
+.icon-link {
+    color: #9ca3af;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.icon-link:hover {
+    color: #ff6b00;
+}
+
+.button-group {
+    display: flex;
+    gap: 0.75rem;
+    margin-left: 2rem;
+}
+
+.action-button {
+    padding: 0.5rem 1.25rem;
+    border: none;
+    border-radius: 0.375rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+}
+
+.action-button:hover {
+    opacity: 0.9;
+}
+
+.share-button {
+    background-color: #ff6b00;
+    color: white;
+}
+
+.back-button {
+    background-color: #4a4a4a;
+    color: white;
+}
+
+@media (max-width: 1024px) {
+    .header-content {
+        flex-wrap: wrap;
+    }
+
+    .button-group {
+        margin-left: auto;
+    }
+}
+
+.contract-address {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #2a2a2a;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    color: #9ca3af;
+    font-size: 0.875rem;
+}
+
+.contract-address:hover {
+    background-color: #333333;
+}
+
+.copy-icon {
+    width: 0.875rem;
+    height: 0.875rem;
+    transition: color 0.2s ease;
+}
+
+.copy-icon.copied {
+    color: #22c55e;
+}
+
+/* Update media queries to handle the contract address */
+@media (max-width: 1024px) {
+    .coin-details {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .contract-address {
+        margin-left: 0;
+    }
+}
+
+/* Keep your existing CSS and update/add these media queries at the bottom */
+
+@media (max-width: 768px) {
+    .header-card {
+        padding: 1rem;
+    }
+
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.25rem;
+    }
+
+    .coin-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .coin-image {
+        width: 64px; /* Made slightly larger for mobile */
+        height: 64px;
+    }
+
+    .coin-details {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        width: 100%;
+    }
+
+    .coin-name {
+        font-size: 1.5rem; /* Made larger for prominence */
+        margin-bottom: 0.25rem;
+    }
+
+    .coin-ticker {
+        font-size: 0.875rem;
+        color: #9ca3af;
+    }
+
+    .coin-marketcap {
+        font-size: 0.875rem;
+    }
+
+    .contract-address {
+        width: auto;
+        padding: 0.5rem 0.75rem;
+        justify-content: center;
+    }
+
+    .icon-links {
+        margin: 0.5rem 0;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .icon-link {
+        font-size: 1.25rem; /* Made icons slightly larger */
+        padding: 0.5rem;
+    }
+
+    .button-group {
+        display: flex;
+        width: 100%;
+        margin: 0;
+        gap: 1rem;
+    }
+
+    .action-button {
+        flex: 1;
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+    }
+}
+
+/* Additional breakpoint for very small screens */
+@media (max-width: 375px) {
+    .header-card {
+        padding: 0.75rem;
+    }
+
+    .coin-name {
+        font-size: 1.25rem;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    .action-button {
+        width: 100%;
+    }
+}

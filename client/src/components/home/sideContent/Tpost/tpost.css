@@ -1,0 +1,142 @@
+.tpost {
+    background-color: #1a1a1a;
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    border: 4px solid #ff6b00;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.tpost-title {
+    color: white;
+    font-size: 1.5rem; /* Reduced from 2rem */
+    font-weight: 600;
+    margin: 0 0 1.5rem 0;
+    padding: 0.75rem; /* Reduced from 1rem */
+    border: 2px solid #ff6b00;
+    border-radius: 1rem;
+    text-align: center;
+    background-color: #2d2d2d;
+}
+
+/* .tpost {
+    background-color: #1a1a1a;
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    border: 4px solid #ff6b00;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.tpost-title {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0 0 1.5rem 0;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid #333;
+} */
+
+.coin-link {
+    display: flex;
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+    gap: 1rem;
+}
+
+.box {
+    background-color: #2d2d2d;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.box:hover {
+    border-color: #ff6b00;
+    transform: translateX(4px);
+}
+
+.img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #ff6b00;
+}
+
+.img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.text h1 {
+    color: white;
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.text h2 {
+    color: #9ca3af;
+    font-size: 0.875rem;
+    margin: 0;
+    padding: 0.25rem 0.5rem;
+    background-color: #1a1a1a;
+    border-radius: 0.5rem;
+    display: inline-block;
+}
+
+/* Gradient backgrounds for variety */
+.box:nth-child(1) {
+    background-color: #2d2d2d;
+}
+.box:nth-child(2) {
+    background-color: #2a2a2a;
+}
+.box:nth-child(3) {
+    background-color: #272727;
+}
+
+/* Hover effects */
+.box:hover .text h1 {
+    color: #ff6b00;
+}
+
+.box:hover .img {
+    border-color: #04aa6d;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .tpost {
+        padding: 1rem;
+    }
+
+    .coin-link {
+        align-items: center;
+    }
+
+    .img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .text h1 {
+        font-size: 1rem;
+    }
+
+    .text h2 {
+        font-size: 0.75rem;
+    }
+}

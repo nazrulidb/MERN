@@ -1,0 +1,47 @@
+.memes-container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+}
+
+.popularMemes {
+    padding-right: 15px;
+}
+
+.popularMemes .box {
+    background-color: #fff;
+    display: flex;
+    margin: 5px 0;
+}
+
+.popularMemes .images {
+    position: relative;
+    height: auto;
+}
+
+.popularMemes img {
+    width: 150px;
+    object-fit: cover;
+}
+
+.popularMemes .text h1 {
+    padding: 20px 0 0 20px;
+    margin: 0;
+}
+
+.popularMemes .date,
+.popularMemes .comment {
+    margin-top: 15px;
+    padding: 0 0 0 20px;
+}
+
+.popularMemes .comment {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 5px 0 0 20px;
+    margin-top: 5px;
+}
+
+.sideContent {
+    padding-left: 20px;
+    width: 85%;
+}

@@ -1,0 +1,130 @@
+.trades-container {
+    padding: 1rem;
+}
+
+.trades-title {
+    color: white;
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.table-container {
+    overflow-x: auto;
+    background-color: #1a1a1a;
+    border-radius: 0.5rem;
+    border: 1px solid #333;
+}
+
+.trades-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.trades-table th,
+.trades-table td {
+    padding: 1rem;
+    text-align: left;
+    color: #e5e5e5;
+    border-bottom: 1px solid #333;
+}
+
+.trades-table th {
+    background-color: #2d2d2d;
+    color: #ff6b00;
+    font-weight: 600;
+}
+
+.trades-table tr:hover {
+    background-color: #2d2d2d;
+}
+
+.trade-type {
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.trade-type.buy {
+    background-color: rgba(34, 197, 94, 0.2);
+    color: #22c55e;
+}
+
+.trade-type.sell {
+    background-color: rgba(239, 68, 68, 0.2);
+    color: #ef4444;
+}
+
+.transaction-link {
+    color: #ff6b00;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.transaction-link:hover {
+    opacity: 0.8;
+}
+
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid #2d2d2d;
+    border-top: 3px solid #ff6b00;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Pagination styles from MemeReviews for consistency */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.page-btn {
+    background-color: #2d2d2d;
+    border: none;
+    color: #ff6b00;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    cursor: pointer;
+}
+
+.page-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.page-number {
+    color: white;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .trades-table {
+        font-size: 0.875rem;
+    }
+
+    .trades-table th,
+    .trades-table td {
+        padding: 0.75rem;
+    }
+}
